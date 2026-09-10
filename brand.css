@@ -1,0 +1,1 @@
+.wordmark{display:inline-flex;align-items:center;flex-shrink:0;gap:0}.wordmark .brand-full{display:block;width:185px;height:auto;max-width:100%;object-fit:contain;filter:none}.wordmark:after,.wordmark:before{display:none}footer .wordmark .brand-full{width:200px}@media(max-width:700px){.header .wordmark .brand-full{width:145px}footer .wordmark .brand-full{width:175px}}
