@@ -4,6 +4,14 @@ DirectoryIndex index.html
 ErrorDocument 404 /404.html
 RewriteEngine On
 
+# Nettoyage editorial : destinations finales
+RewriteRule ^verifiez-statut-garantie-dun-produit-apple(?:/.*)?$ - [G,L]
+RewriteRule ^assistance\-service\-informatique\-a\-cachan(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique-cachan [R=301,L]
+RewriteRule ^service\-en\-informatique/depannage\-informatique\-a\-arcueil(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique-arcueil [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab(?:/index\.html|/)?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L]
+RewriteRule ^engagement\-de\-confidentialite(?:/index\.html|/)?$ https://onetab.fr/politique-de-confidentialite/ [R=301,L]
+
 # Article retire definitivement
 RewriteRule ^ah-linformatique(?:/.*)?$ - [G,L]
 
@@ -16,7 +24,7 @@ RewriteRule ^ https://onetab.fr%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_HOST} ^onetab\.fr$ [NC]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://onetab.fr%{REQUEST_URI} [R=301,L]
-RewriteRule ^assistance\-service\-informatique\-a\-cachan/1\-3/?$ https://onetab.fr/assistance-service-informatique-a-cachan/ [R=301,L]
+RewriteRule ^assistance\-service\-informatique\-a\-cachan/1\-3/?$ https://assistance-informatique.onetab.fr/assistance-informatique-cachan [R=301,L]
 RewriteRule ^conciergerie/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^contactez\-onetab/contactus\-plx1/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
 RewriteRule ^creation\-de\-site\-internet/101972469\-google\-tablet\-1910x1000/?$ https://onetab.fr/creation-de-site-internet/ [R=301,L]
@@ -35,13 +43,13 @@ RewriteRule ^creation\-de\-site\-internet/presta/?$ https://onetab.fr/creation-d
 RewriteRule ^creation\-de\-site\-internet/slider\-big\-4/?$ https://onetab.fr/creation-de-site-internet/ [R=301,L]
 RewriteRule ^creation\-de\-site\-internet/universe\-2/?$ https://onetab.fr/creation-de-site-internet/ [R=301,L]
 RewriteRule ^creation\-de\-site\-internet/wordpress/?$ https://onetab.fr/creation-de-site-internet/ [R=301,L]
-RewriteRule ^engagement\-de\-confidentialite/bank\-safe/?$ https://onetab.fr/engagement-de-confidentialite/ [R=301,L]
-RewriteRule ^engagement\-de\-confidentialite/banner\-database\-confidentiality/?$ https://onetab.fr/engagement-de-confidentialite/ [R=301,L]
+RewriteRule ^engagement\-de\-confidentialite/bank\-safe/?$ https://onetab.fr/politique-de-confidentialite/ [R=301,L]
+RewriteRule ^engagement\-de\-confidentialite/banner\-database\-confidentiality/?$ https://onetab.fr/politique-de-confidentialite/ [R=301,L]
 RewriteRule ^informatique\-a\-arcueil/aqueduc\-darcueil\-cachan/?$ https://onetab.fr/informatique-a-arcueil/ [R=301,L]
-RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/apple\-2/?$ https://onetab.fr/jonathan-tabone-fondateur-de-onetab/ [R=301,L]
-RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/sg/?$ https://onetab.fr/jonathan-tabone-fondateur-de-onetab/ [R=301,L]
-RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/tf1/?$ https://onetab.fr/jonathan-tabone-fondateur-de-onetab/ [R=301,L]
-RewriteRule ^jonathan\-tabone/?$ https://onetab.fr/jonathan-tabone-fondateur-de-onetab/ [R=301,L]
+RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/apple\-2/?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L]
+RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/sg/?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L]
+RewriteRule ^jonathan\-tabone\-fondateur\-de\-onetab/tf1/?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L]
+RewriteRule ^jonathan\-tabone/?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L]
 RewriteRule ^onetab\-centre\-de\-service\-informatique\-web/?$ https://onetab.fr/ [R=301,L]
 RewriteRule ^onetab\-centre\-de\-service\-informatique\-web/0033177623884\-noir/?$ https://onetab.fr/ [R=301,L]
 RewriteRule ^onetab\-centre\-de\-service\-informatique\-web/a\-propos\-onetab\-line\-blanc/?$ https://onetab.fr/ [R=301,L]
@@ -180,14 +188,14 @@ RewriteRule ^portfolio\-realisation/ze\-diamant\-paris\-diamantaire\-en\-ligne/z
 RewriteRule ^rdv/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
 RewriteRule ^reseaux\-informatiques/?$ https://onetab.fr/service-en-informatique/reseaux-informatiques/ [R=301,L]
 RewriteRule ^service\-en\-informatique/assist\-kb/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/1\-rapide/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/2\-secure/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/3\-eco/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/assistance\-informatique\-a\-distance\-2/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/fond/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-particulier/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-professionnel/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/remote\-assistance/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/1\-rapide/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/2\-secure/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/3\-eco/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/assistance\-informatique\-a\-distance\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/fond/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-particulier/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-professionnel/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/remote\-assistance/?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-mac/2\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-mac/b3\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-mac/b31/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
@@ -203,7 +211,7 @@ RewriteRule ^service\-en\-informatique/assistance\-mac/responsive\-design/?$ htt
 RewriteRule ^service\-en\-informatique/assistance\-pc\-windows/assistance\-et\-service\-informatique\-pc/?$ https://assistance-informatique.onetab.fr/assistance-informatique/pc-windows [R=301,L]
 RewriteRule ^service\-en\-informatique/business/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^service\-en\-informatique/demander\-une\-intervention\-en\-informatique/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
-RewriteRule ^service\-en\-informatique/depannage\-informatique\-a\-arcueil/polygons\-onetab/?$ https://onetab.fr/service-en-informatique/depannage-informatique-a-arcueil/ [R=301,L]
+RewriteRule ^service\-en\-informatique/depannage\-informatique\-a\-arcueil/polygons\-onetab/?$ https://assistance-informatique.onetab.fr/assistance-informatique-arcueil [R=301,L]
 RewriteRule ^service\-en\-informatique/entreprise\-informatique/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^service\-en\-informatique/iphone\-main/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^service\-en\-informatique/mac\-table\-call\-onetab\-blacked\-2/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
@@ -225,7 +233,7 @@ RewriteRule ^service\-en\-informatique/reseaux\-informatiques/voip\-red\-phone/?
 RewriteRule ^service\-en\-informatique/surplace/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^services\-onetab/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^tarifs\-prestations/?$ https://onetab.fr/service-en-informatique/informations-tarifaires/ [R=301,L]
-RewriteRule ^verifiez\-statut\-garantie\-dun\-produit\-apple/garantie\-apple\-couverture/?$ https://onetab.fr/verifiez-statut-garantie-dun-produit-apple/ [R=301,L]
+RewriteRule ^verifiez\-statut\-garantie\-dun\-produit\-apple/garantie\-apple\-couverture/?$ - [G,L]
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
 RewriteRule ^(.*)index\.html$ https://onetab.fr/$1 [R=301,L]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=2590$
@@ -245,7 +253,7 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3434$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/contactez-onetab/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3601$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistance-informatique-distance [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4223$
 RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4238$
@@ -253,17 +261,17 @@ RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistan
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4245$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/reseaux-informatiques/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4356$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/engagement-de-confidentialite/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://onetab.fr/politique-de-confidentialite/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4392$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/maintenance-informatique-tpe-pme/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5164$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/depannage-informatique-a-arcueil/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistance-informatique-arcueil [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5439$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/informations-tarifaires/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5686$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/nos-realisations/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=6060$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/jonathan-tabone-fondateur-de-onetab/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://onetab.fr/a-propos-de-onetab-informatique-web/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=6609$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/cgv/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=6697$
@@ -309,7 +317,7 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/contactez-onetab/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=8406$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/maintenance-informatique-tpe-pme/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3785$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/verifiez-statut-garantie-dun-produit-apple/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ - [G,L]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5092$
 RewriteRule ^(?:index\.php)?$ - [G,L]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5777$
@@ -325,7 +333,7 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/portfolio-realisation/wandertea/
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=6017$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/portfolio-realisation/tallberghus/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=7228$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/assistance-service-informatique-a-cachan/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistance-informatique-cachan [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=7692$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/portfolio-realisation/journal-de-fanny/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=7698$
