@@ -3,6 +3,11 @@ Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 RewriteEngine On
+
+# Services ponctuels : transfert permanent vers OneTab Assistance
+RewriteRule ^service\-en\-informatique/assistance\-mac(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-pc\-windows(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique/pc-windows [R=301,L]
+RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L]
 RewriteCond %{HTTP_HOST} ^www\.onetab\.fr$ [NC]
 RewriteRule ^ https://onetab.fr%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_HOST} ^onetab\.fr$ [NC]
@@ -181,19 +186,19 @@ RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/fon
 RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-particulier/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/icone\-professionnel/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-informatique\-a\-distance/remote\-assistance/?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/2\-2/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/b3\-2/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/b31/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/imac/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macbook\-2/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macbook/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macbookair/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macbookpro/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macisbooting\-2/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/macmini/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/migration\-windows\-vers\-mac/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-mac/responsive\-design/?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L]
-RewriteRule ^service\-en\-informatique/assistance\-pc\-windows/assistance\-et\-service\-informatique\-pc/?$ https://onetab.fr/service-en-informatique/assistance-pc-windows/ [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/2\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/b3\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/b31/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/imac/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macbook\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macbook/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macbookair/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macbookpro/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macisbooting\-2/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/macmini/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/migration\-windows\-vers\-mac/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-mac/responsive\-design/?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
+RewriteRule ^service\-en\-informatique/assistance\-pc\-windows/assistance\-et\-service\-informatique\-pc/?$ https://assistance-informatique.onetab.fr/assistance-informatique/pc-windows [R=301,L]
 RewriteRule ^service\-en\-informatique/business/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^service\-en\-informatique/demander\-une\-intervention\-en\-informatique/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
 RewriteRule ^service\-en\-informatique/depannage\-informatique\-a\-arcueil/polygons\-onetab/?$ https://onetab.fr/service-en-informatique/depannage-informatique-a-arcueil/ [R=301,L]
@@ -206,9 +211,9 @@ RewriteRule ^service\-en\-informatique/maintenance\-informatique\-tpe\-pme/suppo
 RewriteRule ^service\-en\-informatique/prendre\-rendez\-vous\-avec\-onetab/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
 RewriteRule ^service\-en\-informatique/prendre\-rendez\-vous\-avec\-onetab/assistance\-et\-service\-informatique\-pour\-les\-professionnels/?$ https://onetab.fr/service-en-informatique/maintenance-informatique-tpe-pme/ [R=301,L]
 RewriteRule ^service\-en\-informatique/prendre\-rendez\-vous\-avec\-onetab/myit_icon_appointment/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
-RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/hard\-drive\-recovery\-robotechno/?$ https://onetab.fr/service-en-informatique/recuperation-de-donnees/ [R=301,L]
-RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/recuperation\-de\-donnees\-2/?$ https://onetab.fr/service-en-informatique/recuperation-de-donnees/ [R=301,L]
-RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/recuperation\-de\-donnees/?$ https://onetab.fr/service-en-informatique/recuperation-de-donnees/ [R=301,L]
+RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/hard\-drive\-recovery\-robotechno/?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L]
+RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/recuperation\-de\-donnees\-2/?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L]
+RewriteRule ^service\-en\-informatique/recuperation\-de\-donnees/recuperation\-de\-donnees/?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L]
 RewriteRule ^service\-en\-informatique/remote\-assist1/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^service\-en\-informatique/reseaux\-informatiques/informatique\-dans\-le\-nuage\-cloud/?$ https://onetab.fr/service-en-informatique/reseaux-informatiques/ [R=301,L]
 RewriteRule ^service\-en\-informatique/reseaux\-informatiques/logitech\-alert\-750e\-outdoor\-master\-system/?$ https://onetab.fr/service-en-informatique/reseaux-informatiques/ [R=301,L]
@@ -228,7 +233,7 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/ [R=301,
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3206$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/creation-de-site-internet/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3297$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/assistance-mac/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3331$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/contactez-onetab/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3370$
@@ -240,9 +245,9 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/contactez-onetab/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3601$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/assistance-informatique-a-distance/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4223$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/recuperation-de-donnees/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/recuperation-donnees [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4238$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/assistance-pc-windows/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ https://assistance-informatique.onetab.fr/assistance-informatique/pc-windows [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4245$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/reseaux-informatiques/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=4356$
