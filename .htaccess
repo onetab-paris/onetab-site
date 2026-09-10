@@ -4,6 +4,9 @@ DirectoryIndex index.html
 ErrorDocument 404 /404.html
 RewriteEngine On
 
+# Article retire definitivement
+RewriteRule ^ah-linformatique(?:/.*)?$ - [G,L]
+
 # Services ponctuels : transfert permanent vers OneTab Assistance
 RewriteRule ^service\-en\-informatique/assistance\-mac(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique/mac [R=301,L]
 RewriteRule ^service\-en\-informatique/assistance\-pc\-windows(?:/index\.html|/)?$ https://assistance-informatique.onetab.fr/assistance-informatique/pc-windows [R=301,L]
@@ -13,7 +16,6 @@ RewriteRule ^ https://onetab.fr%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTP_HOST} ^onetab\.fr$ [NC]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://onetab.fr%{REQUEST_URI} [R=301,L]
-RewriteRule ^ah\-linformatique/capture/?$ https://onetab.fr/ah-linformatique/ [R=301,L]
 RewriteRule ^assistance\-service\-informatique\-a\-cachan/1\-3/?$ https://onetab.fr/assistance-service-informatique-a-cachan/ [R=301,L]
 RewriteRule ^conciergerie/?$ https://onetab.fr/service-en-informatique/ [R=301,L]
 RewriteRule ^contactez\-onetab/contactus\-plx1/?$ https://onetab.fr/contactez-onetab/ [R=301,L]
@@ -309,7 +311,7 @@ RewriteRule ^(?:index\.php)?$ https://onetab.fr/service-en-informatique/maintena
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=3785$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/verifiez-statut-garantie-dun-produit-apple/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5092$
-RewriteRule ^(?:index\.php)?$ https://onetab.fr/ah-linformatique/ [R=301,L,QSD]
+RewriteRule ^(?:index\.php)?$ - [G,L]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5777$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/portfolio-realisation/club-inter-optiques/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=5788$
