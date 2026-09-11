@@ -358,3 +358,10 @@ RewriteCond %{QUERY_STRING} ^(?:p|page_id)=8376$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/portfolio-realisation/urban-cars/ [R=301,L,QSD]
 RewriteCond %{QUERY_STRING} ^(?:p|page_id)=9242$
 RewriteRule ^(?:index\.php)?$ https://onetab.fr/ [R=301,L,QSD]
+
+# Revalidate documents after each site update; images retain their own cache policy.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
